@@ -68,7 +68,7 @@ zena(alice). % vymyslene, Stevova manzelka (Homerova teta)
 
 staryRodic(X,Y):-rodic(X,Z),rodic(Z,Y).
 staraMama(X,Y):-staryRodic(X,Y),zena(X).
-staryOtec(X,Y):-staryRodic(X,Y),muz(Y).
+staryOtec(X,Y):-staryRodic(X,Y),muz(X).
 
 vnuca(X,Y):-staryRodic(Y,X).
 vnuk(X,Y):-vnuca(X,Y),muz(X).
@@ -95,7 +95,7 @@ stryna(X,Y):-stryko(Z,Y),manzelia(Z,X).
 ujo(X,Y):-mama(Z,Y),brat(X,Z).
 ujcina(X,Y):-ujo(Z,Y),manzelia(Z,X).
 
-teta(X,Y):-mama(Z,Y),sestra(X,Z).
+teta(X,Y):-rodic(Z,Y),sestra(X,Z).
 svako(X,Y):-teta(Z,Y),manzelia(X,Z).
 
 %bratranec(X,Y):-vnuca(X,STARY_RODIC),vnuca(Y,STARY_RODIC), \+ surodenec(X,Y), X \== Y. % alternative
