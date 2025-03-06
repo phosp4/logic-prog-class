@@ -145,3 +145,8 @@ sura(X,Y):-zena(X),muz(Y),manzelia(Y,Z),surodenec(Z,X). % manzelkina sestra
 
 prastryko(X,Y):-rodic(Z,Y),(stryko(X,Z);ujo(X,Z);svako(X,Z)).
 prateta(X,Y):-rodic(Z,Y),(stryna(X,Z);ujcina(X,Z);teta(X,Z)). % Y rodica stryna alebo teta alebo ujcina
+
+% class 03
+
+predok(X,Y):-rodic(X,Y).
+predok(X,Y):-rodic(X,Z),predok(Z,Y). % rekurzivne
