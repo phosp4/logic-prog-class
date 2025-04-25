@@ -3,8 +3,8 @@
 skontrolujSudoku(M,Predloha):-
     length(M,Dlzka),
     skontrolujRiadky(M,Dlzka,Predloha),
-    transponuj(M,L1),
-    skontrolujRiadky(L1,Dlzka,Predloha).
+    transponuj(M,M2),
+    skontrolujRiadky(M2,Dlzka,Predloha).
 
 %%%%%   permutacie   %%%%%
 
